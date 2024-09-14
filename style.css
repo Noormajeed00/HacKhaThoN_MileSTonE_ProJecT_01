@@ -115,3 +115,65 @@ button.toggle-btn:hover {
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
 }
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    /* Make sidebar and content area stack vertically */
+    .resume-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Adjust sidebar width */
+    .sidebar {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    /* Make content area take full width */
+    .content-area {
+        padding: 10px;
+        flex: none;
+    }
+
+    /* Adjust card spacing for smaller screens */
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* Adjust profile pic size */
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    /* Reduce font size for smaller screens */
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    .sidebar a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar a {
+        font-size: 0.9em;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.2em;
+    }
+
+    button.toggle-btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
